@@ -1,0 +1,337 @@
+/* Variables de couleurs inspirées de PrestaShop */
+:root {
+    --primary-color: #6c7ae0;
+    --primary-hover: #5a68ce;
+    --secondary-color: #764ba2;
+    --text-dark: #363a41;
+    --text-light: #7a7e85;
+    --border-color: #e8e9eb;
+    --bg-light: #f6f6f6;
+    --success-color: #00b67a;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#contact-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+}
+
+.contact-form {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 45px 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet décoratif en haut */
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+/* En-tête du formulaire */
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.form-banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.banner-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 4px 16px rgba(108, 122, 224, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+}
+
+.banner-image:hover {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 8px 24px rgba(108, 122, 224, 0.35);
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 2px;
+}
+
+/* Groupes de formulaire */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+
+.form-group label::after {
+    content: ' *';
+    color: #e74c3c;
+    font-size: 13px;
+}
+
+/* Champs de formulaire */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.form-group input[type="text"]:hover,
+.form-group input[type="email"]:hover,
+.form-group textarea:hover {
+    border-color: #d0d2d9;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(108, 122, 224, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+    line-height: 1.6;
+}
+
+/* Placeholder style */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b0b3ba;
+    opacity: 1;
+}
+
+/* Bouton de soumission */
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #ffffff;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(108, 122, 224, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(108, 122, 224, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108, 122, 224, 0.3);
+}
+
+/* Message de statut */
+.message-status {
+    margin-top: 20px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.message-status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-form {
+        padding: 35px 25px;
+        border-radius: 10px;
+    }
+
+    .banner-image {
+        width: 75px;
+        height: 75px;
+        border-width: 3px;
+    }
+
+    .form-title {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact-section {
+        padding: 30px 10px;
+    }
+
+    .contact-form {
+        padding: 30px 20px;
+        border-radius: 8px;
+    }
+
+    .banner-image {
+        width: 65px;
+        height: 65px;
+        border-width: 3px;
+    }
+
+    .form-title {
+        font-size: 20px;
+        letter-spacing: 0.8px;
+        padding-bottom: 12px;
+    }
+
+    .form-title::after {
+        width: 50px;
+        height: 3px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        padding: 11px 13px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .submit-btn {
+        padding: 13px 25px;
+        font-size: 14px;
+    }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-form {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #e74c3c;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+    border-color: var(--success-color);
+}
+
+
+*:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}

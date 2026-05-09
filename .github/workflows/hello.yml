@@ -1,0 +1,8 @@
+name: Check Code
+on: [push]
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Mon badge Automated arrive !"
